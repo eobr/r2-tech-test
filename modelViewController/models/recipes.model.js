@@ -32,7 +32,7 @@ const selectRecipeById = ({ id }) => {
 
 const addNewRecipe = (newRecipe) => {
   try {
-    // with more time, I would check the format of newRecipe to see... 
+    // with more time, I would check the format of newRecipe to see...
     // ... if it had the correct fields, and error handle accordingly
     const recipes = retrieveAllRecipes();
     const id = { id: `recipe-${recipes.length}` };
@@ -47,4 +47,9 @@ const addNewRecipe = (newRecipe) => {
   }
 };
 
-module.exports = { selectRecipes, selectRecipeById, addNewRecipe, retrieveAllRecipes };
+module.exports = {
+  selectRecipes,
+  selectRecipeById,
+  addNewRecipe,
+  retrieveAllRecipes,
+};
