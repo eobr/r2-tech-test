@@ -1,12 +1,7 @@
 
 const excludeIngredients = (recipes, exclude) => {
   const excludeArr = exclude.split(",").map((x) => x.replace(/_/g, " "));
-  return recipes.filter((recipe) => {
-    for (const ingredient of recipe.ingredients) {
-      if (excludeArr.includes(ingredient.name)) return false;
-    }
-    return true;
-  });
+  return recipes.filter((x) => x.ingredients.every(e => !excludeArr.includes(e.name)));
 };
 
 module.exports = { excludeIngredients };
