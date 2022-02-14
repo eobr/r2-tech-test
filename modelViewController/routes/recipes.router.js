@@ -1,5 +1,5 @@
 const recipesRouter = require("express").Router();
-const { getRecipes, getRecipeById, postNewRecipe } = require("../controllers/recipes.controller");
+const { getRecipes, getRecipesAsync, getRecipeById, postNewRecipe } = require("../controllers/recipes.controller");
 
 recipesRouter.route("/").get(getRecipes);
 

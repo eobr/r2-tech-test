@@ -2,8 +2,18 @@ const {
   selectRecipes,
   selectRecipeById,
   addNewRecipe,
+  selectRecipesAsync
 } = require("../models/recipes.model");
 
+// Working async version of first endpoint
+const getRecipesAsync = (req, res, next) => {
+  selectRecipesAsync(req.query, (err, recipes) => {
+    if (err) next(err);
+    else res.status(200).send({ recipes });
+  });
+};
+
+// Synchronous version of first endpoint - I decided to stick with this method 
 const getRecipes = async (req, res, next) => {
   try {
     const recipes = await selectRecipes(req.query);
@@ -32,4 +42,4 @@ const postNewRecipe = async (req, res, next) => {
   }
 };
 
-module.exports = { getRecipes, getRecipeById, postNewRecipe };
+module.exports = { getRecipes, getRecipeById, postNewRecipe, getRecipesAsync };

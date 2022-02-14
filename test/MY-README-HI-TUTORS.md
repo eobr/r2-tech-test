@@ -9,9 +9,9 @@ I've only ran it on dataTest.json and it worked, so you can see it working on th
 - Refactoring a few functions which are a bit messy (...looking at you combineIngredients 👀)
 - A few more tests, eg. testing id number goes up with each new post (it does but there is no official test for it)
 - Research whether the try-catch blocks in the models are necesary, because maybe the error would be caught by the controller anyway?
-- Research a bit more into fs.readFileSync and see if I made the right choice over the async version
+- Research a bit more into fs.readFileSync/writeFileSync and see if I made the right choice over the async version
 
 
-Overall, I really enjoyed this task, and it was a great reminder of how much I love backend!
+Overall, I really enjoyed this task, and it was a great reminder of how much I love backend.
 
 
