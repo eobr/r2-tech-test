@@ -11,7 +11,7 @@ describe("/api", () => {
   });
 });
 
-describe.only("GET /api/recipes", () => {
+describe("GET /api/recipes", () => {
   test("200: Expect 200 response from server", async () => {
     await request.get("/api/recipes").expect(200);
   });
